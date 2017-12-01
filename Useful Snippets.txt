@@ -9,3 +9,9 @@ IsIPv6LinkLocal   : False
 IsIPv6SiteLocal   : False
 
 
+
+powershell -Command "Start-Process cmd -ArgumentList '/K cd %CD%' -Verb RunAs "  (opens cmd as administrator)
+
+NetSh Advfirewall set allprofiles state off (If totally locked out due to stupid DNS issues stating network is public vs domain)
+
+runas /user:MYDOMAIN\USER [ProcessName] (Run as priviledged user in order to elevate)
